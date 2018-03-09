@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="张云涛的博客">
 <meta property="og:description" content="Python对象1、Python对象Python使用对象模型来存储数据。所有的Python对象都有三个特性：身份、类型和值。身份可以使用内建函数id()得到；类型可以使用内建函数type()查看。   2、标准类型 数字 整形 Integer 布尔型 Boolean 长整形 Long integer 浮点型 Floating point real number  复数型 Complex numbe">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-09T19:00:09.972Z">
+<meta property="og:updated_time" content="2018-03-09T19:46:46.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python总结">
 <meta name="twitter:description" content="Python对象1、Python对象Python使用对象模型来存储数据。所有的Python对象都有三个特性：身份、类型和值。身份可以使用内建函数id()得到；类型可以使用内建函数type()查看。   2、标准类型 数字 整形 Integer 布尔型 Boolean 长整形 Long integer 浮点型 Floating point real number  复数型 Complex numbe">
@@ -59,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
@@ -101,7 +101,9 @@
 <li>字符串 String</li>
 <li>列表 List</li>
 <li>元组 Tuple</li>
-<li>字典 Dictionary<h3 id="3、其他内建类型"><a href="#3、其他内建类型" class="headerlink" title="3、其他内建类型"></a>3、其他内建类型</h3></li>
+<li>字典 Dictionary</li>
+</ul>
+<h3 id="3、其他内建类型"><a href="#3、其他内建类型" class="headerlink" title="3、其他内建类型"></a>3、其他内建类型</h3><ul>
 <li>类型</li>
 <li>Null 对象</li>
 <li>文件</li>
@@ -130,11 +132,110 @@
 <li>省略</li>
 <li>Xrange</li>
 </ul>
-<h5 id="注：异常是用类来实现的"><a href="#注：异常是用类来实现的" class="headerlink" title="注：异常是用类来实现的"></a>注：异常是用类来实现的</h5>
+<h5 id="注：异常是用类来实现的"><a href="#注：异常是用类来实现的" class="headerlink" title="注：异常是用类来实现的"></a>注：异常是用类来实现的</h5><h4 id="4-1、代码对象"><a href="#4-1、代码对象" class="headerlink" title="4.1、代码对象"></a>4.1、代码对象</h4><p>代码对象是编译过的python源代码片段，是可执行对象。<br>通过调用compile()可以得到代码对象。<br>代码对象可以被exec命令或eval()内建函数来执行。</p>
+<h4 id="4-2-帧对象"><a href="#4-2-帧对象" class="headerlink" title="4.2 帧对象"></a>4.2 帧对象</h4><p>帧对象表示python的执行栈帧。<br>帧对象包含python解释器在运行时所需要知道的所有信息。它的属性包括指向上一帧的链接，正在被执行的代码，本地及全局名称空间字典及当前指令等。<br>每次函数调用产生一个新的帧，每一个帧对象都会相应创建一个C栈帧。<br>用到帧对象的一个地方是跟踪记录对象。  </p>
+<h4 id="4-3-跟踪记录对象"><a href="#4-3-跟踪记录对象" class="headerlink" title="4.3 跟踪记录对象"></a>4.3 跟踪记录对象</h4><p>代码出错时，python会引发一个异常。<br>如果异常未被捕获和处理，解释器会退出脚本运行，显示诊断信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Traceback (innermost last):</span><br><span class="line">    File &quot;&lt;stdin&gt;&quot;, Line N? in ???</span><br><span class="line">ErrorName: error reason</span><br></pre></td></tr></table></figure></p>
+<p>异常发生时，一个包含针对异常的栈跟踪信息的跟踪记录对象被创建。<br>如果有异常处理程序，处理程序就可以访问这个跟踪记录。</p>
+<h4 id="4-4、切片对象"><a href="#4-4、切片对象" class="headerlink" title="4.4、切片对象"></a>4.4、切片对象</h4><p>切片语法：</p>
+<ul>
+<li>seqnence[start1:end1, start2:end2]</li>
+<li>sequence[…, start1:end1]</li>
+<li>slice() 内建函数</li>
+<li>sequence[start:end:步进值] 步进切片<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; foostr = &apos;abcde&apos;</span><br><span class="line">&gt;&gt;&gt; foostr[::-1]</span><br><span class="line">&apos;edcba&apos;</span><br><span class="line">&gt;&gt;&gt; foostr[::-2]</span><br><span class="line">&apos;eca&apos;</span><br><span class="line">&gt;&gt;&gt; foolist = [123, &apos;xba&apos;, 342.23, &apos;abc&apos;]</span><br><span class="line">&gt;&gt;&gt; foolist[::-1]</span><br><span class="line">[&apos;abc&apos;, 342.23, &apos;xba&apos;, 123]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="4-5-省略对象"><a href="#4-5-省略对象" class="headerlink" title="4.5 省略对象"></a>4.5 省略对象</h4><p>省略对象用于扩展切片中，起记号作用。<br>这个对象在切片语法中表示省略号。类似于Null对None，省略对象有一个唯一的名字Ellipsis，它的布尔值始终为True。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(...)</span><br><span class="line">Ellipsis</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-6、XRange对象"><a href="#4-6、XRange对象" class="headerlink" title="4.6、XRange对象"></a>4.6、XRange对象</h4><p>内建函数xrange()会产生一个Xrange对象。<br>时range()函数的兄弟版本。</p>
+<h3 id="5、标准类型操作符"><a href="#5、标准类型操作符" class="headerlink" title="5、标准类型操作符"></a>5、标准类型操作符</h3><h4 id="5-1、对象值的比较"><a href="#5-1、对象值的比较" class="headerlink" title="5.1、对象值的比较"></a>5.1、对象值的比较</h4><p>所有的内建类型均支持比较运算。  </p>
+<h4 id="5-2、对象身份比较"><a href="#5-2、对象身份比较" class="headerlink" title="5.2、对象身份比较"></a>5.2、对象身份比较</h4><p>python提供了is和is not操作符来测试两个变量是否指向同一个对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a is b</span><br><span class="line">id(a) == id(b) #两个表达式的意义相同</span><br></pre></td></tr></table></figure></p>
+<h5 id="注：整形对象和字符串对象是不可变对象，所以python会缓存它们。"><a href="#注：整形对象和字符串对象是不可变对象，所以python会缓存它们。" class="headerlink" title="注：整形对象和字符串对象是不可变对象，所以python会缓存它们。"></a>注：整形对象和字符串对象是不可变对象，所以python会缓存它们。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = 1</span><br><span class="line">&gt;&gt;&gt; id(a)</span><br><span class="line">1234567</span><br><span class="line">&gt;&gt;&gt; b = 1</span><br><span class="line">&gt;&gt;&gt; id(b)</span><br><span class="line">1234567</span><br><span class="line">&gt;&gt;&gt; c = 1.0</span><br><span class="line">&gt;&gt;&gt; id(c)</span><br><span class="line">2345678</span><br><span class="line">&gt;&gt;&gt; d = 1.0</span><br><span class="line">&gt;&gt;&gt; id(d)</span><br><span class="line">2345689</span><br></pre></td></tr></table></figure>
+<p>另外字符串似乎不会缓存，此处待验证。</p>
+<h4 id="5-3-布尔类型"><a href="#5-3-布尔类型" class="headerlink" title="5.3 布尔类型"></a>5.3 布尔类型</h4><p>布尔逻辑操作符 and or not。<br>三个操作符中not的优先级最高。  </p>
+<h3 id="6、标准类型内建函数"><a href="#6、标准类型内建函数" class="headerlink" title="6、标准类型内建函数"></a>6、标准类型内建函数</h3><ul>
+<li>cmp()</li>
+<li>type()</li>
+<li>str() repr() <code></code>    <ul>
+<li>str()和repr()或反引号操作符(<code></code>)可以以字符串的方式获得对象内容、类型、数值属性等信息。</li>
+</ul>
+</li>
+<li>ininstance()</li>
+<li>…</li>
+</ul>
+<h3 id="7、类型工厂函数"><a href="#7、类型工厂函数" class="headerlink" title="7、类型工厂函数"></a>7、类型工厂函数</h3><p>所有的内建函数如今都是类。<br>在此基础上，原来的内建转换函数如int()、type()、list()等，都成了工厂函数。<br>意即虽然看上去像函数，实质上是类。<br>调用它们时，实际上生成了该类型的一个实例，就像工厂生产货物一样。<br>例如</p>
+<ul>
+<li>int() long() float() complex()</li>
+<li>str() unicode() basestring()</li>
+<li>list() tuple()</li>
+<li>type()</li>
+<li>dict()</li>
+<li>bool()</li>
+<li>set() fronzenset()</li>
+<li>object()</li>
+<li>classmethod()</li>
+<li>staticmethod90</li>
+<li>super()</li>
+<li>property()</li>
+<li>file()</li>
+</ul>
+<h3 id="8、标准类型的分类"><a href="#8、标准类型的分类" class="headerlink" title="8、标准类型的分类"></a>8、标准类型的分类</h3><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>存储模型</th>
+<th>更新模型</th>
+<th>访问模型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数字</td>
+<td>标量</td>
+<td>不可更改</td>
+<td>直接访问</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td>标量</td>
+<td>不可更改</td>
+<td>顺序访问</td>
+</tr>
+<tr>
+<td>列表</td>
+<td>容器</td>
+<td>可更改</td>
+<td>顺序访问</td>
+</tr>
+<tr>
+<td>元组</td>
+<td>容器</td>
+<td>不可更改</td>
+<td>顺序访问</td>
+</tr>
+<tr>
+<td>字典</td>
+<td>容器</td>
+<td>可更改</td>
+<td>映射访问</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9、不支持的类型"><a href="#9、不支持的类型" class="headerlink" title="9、不支持的类型"></a>9、不支持的类型</h3><ul>
+<li>byte char</li>
+<li>指针</li>
+<li>int vs short vs long<ul>
+<li>实际上python的整形相当于C语言的长整形</li>
+</ul>
+</li>
+<li>float vs double<ul>
+<li>python的float实际相当于双精度类型</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/09/Python总结/" data-id="cjekb36in0000qoust5uo7vvk" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/03/09/Python总结/" data-id="cjekcr4ep000058ustmll0kjv" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -145,7 +246,7 @@
   
   
     <a href="/2018/03/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -168,7 +269,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
     </div>
@@ -178,7 +279,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
