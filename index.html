@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
@@ -89,8 +89,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="第一章、Python对象"><a href="#第一章、Python对象" class="headerlink" title="第一章、Python对象"></a>第一章、Python对象</h2><h3 id="1、Python对象"><a href="#1、Python对象" class="headerlink" title="1、Python对象"></a>1、Python对象</h3><p>Python使用对象模型来存储数据。<br>所有的Python对象都有三个特性：身份、类型和值。<br>身份可以使用内建函数id()得到；类型可以使用内建函数type()查看。  </p>
-<h3 id="2、标准类型"><a href="#2、标准类型" class="headerlink" title="2、标准类型"></a>2、标准类型</h3><ul>
+<h2 id="第一章、Python对象"><a href="#第一章、Python对象" class="headerlink" title="第一章、Python对象"></a>第一章、Python对象</h2><h3 id="1-1、Python对象"><a href="#1-1、Python对象" class="headerlink" title="1.1、Python对象"></a>1.1、Python对象</h3><p>Python使用对象模型来存储数据。<br>所有的Python对象都有三个特性：身份、类型和值。<br>身份可以使用内建函数id()得到；类型可以使用内建函数type()查看。  </p>
+<h3 id="1-2、标准类型"><a href="#1-2、标准类型" class="headerlink" title="1.2、标准类型"></a>1.2、标准类型</h3><ul>
 <li>数字</li>
 <li>整形 Integer</li>
 <li>布尔型 Boolean</li>
@@ -102,7 +102,7 @@
 <li>元组 Tuple</li>
 <li>字典 Dictionary</li>
 </ul>
-<h3 id="3、其他内建类型"><a href="#3、其他内建类型" class="headerlink" title="3、其他内建类型"></a>3、其他内建类型</h3><ul>
+<h3 id="1-3、其他内建类型"><a href="#1-3、其他内建类型" class="headerlink" title="1.3、其他内建类型"></a>1.3、其他内建类型</h3><ul>
 <li>类型</li>
 <li>Null 对象</li>
 <li>文件</li>
@@ -111,8 +111,8 @@
 <li>模块</li>
 <li>类</li>
 </ul>
-<h4 id="3-1-类型对象和type类型对象"><a href="#3-1-类型对象和type类型对象" class="headerlink" title="3.1 类型对象和type类型对象"></a>3.1 类型对象和type类型对象</h4><p>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; type(21)</span><br><span class="line">&lt;type &apos;int&apos;&gt;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-2-None-Python的None对象"><a href="#3-2-None-Python的None对象" class="headerlink" title="3.2 None Python的None对象"></a>3.2 None Python的None对象</h4><p>None不支持任何运算也没有任何内建方法。</p>
+<h4 id="1-3-1-类型对象和type类型对象"><a href="#1-3-1-类型对象和type类型对象" class="headerlink" title="1.3.1 类型对象和type类型对象"></a>1.3.1 类型对象和type类型对象</h4><p>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; type(21)</span><br><span class="line">&lt;type &apos;int&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-3-2-None-Python的None对象"><a href="#1-3-2-None-Python的None对象" class="headerlink" title="1.3.2 None Python的None对象"></a>1.3.2 None Python的None对象</h4><p>None不支持任何运算也没有任何内建方法。</p>
 <p>所有标准对象均可用于布尔测试，同类型的对象可以比较大小。每个对象天生具有布尔值。<br>下列对象的布尔值是False。  </p>
 <ul>
 <li>None</li>
@@ -123,7 +123,7 @@
 <li>空元组 ()</li>
 <li>空字典 {}</li>
 </ul>
-<h3 id="4、内部类型"><a href="#4、内部类型" class="headerlink" title="4、内部类型"></a>4、内部类型</h3><ul>
+<h3 id="1-4、内部类型"><a href="#1-4、内部类型" class="headerlink" title="1.4、内部类型"></a>1.4、内部类型</h3><ul>
 <li>代码</li>
 <li>帧</li>
 <li>跟踪记录</li>
@@ -131,11 +131,11 @@
 <li>省略</li>
 <li>Xrange</li>
 </ul>
-<h5 id="注：异常是用类来实现的"><a href="#注：异常是用类来实现的" class="headerlink" title="注：异常是用类来实现的"></a>注：异常是用类来实现的</h5><h4 id="4-1、代码对象"><a href="#4-1、代码对象" class="headerlink" title="4.1、代码对象"></a>4.1、代码对象</h4><p>代码对象是编译过的python源代码片段，是可执行对象。<br>通过调用compile()可以得到代码对象。<br>代码对象可以被exec命令或eval()内建函数来执行。</p>
-<h4 id="4-2-帧对象"><a href="#4-2-帧对象" class="headerlink" title="4.2 帧对象"></a>4.2 帧对象</h4><p>帧对象表示python的执行栈帧。<br>帧对象包含python解释器在运行时所需要知道的所有信息。它的属性包括指向上一帧的链接，正在被执行的代码，本地及全局名称空间字典及当前指令等。<br>每次函数调用产生一个新的帧，每一个帧对象都会相应创建一个C栈帧。<br>用到帧对象的一个地方是跟踪记录对象。  </p>
-<h4 id="4-3-跟踪记录对象"><a href="#4-3-跟踪记录对象" class="headerlink" title="4.3 跟踪记录对象"></a>4.3 跟踪记录对象</h4><p>代码出错时，python会引发一个异常。<br>如果异常未被捕获和处理，解释器会退出脚本运行，显示诊断信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Traceback (innermost last):</span><br><span class="line">    File &quot;&lt;stdin&gt;&quot;, Line N? in ???</span><br><span class="line">ErrorName: error reason</span><br></pre></td></tr></table></figure></p>
+<h5 id="注：异常是用类来实现的"><a href="#注：异常是用类来实现的" class="headerlink" title="注：异常是用类来实现的"></a>注：异常是用类来实现的</h5><h4 id="1-4-1、代码对象"><a href="#1-4-1、代码对象" class="headerlink" title="1.4.1、代码对象"></a>1.4.1、代码对象</h4><p>代码对象是编译过的python源代码片段，是可执行对象。<br>通过调用compile()可以得到代码对象。<br>代码对象可以被exec命令或eval()内建函数来执行。</p>
+<h4 id="1-4-2-帧对象"><a href="#1-4-2-帧对象" class="headerlink" title="1.4.2 帧对象"></a>1.4.2 帧对象</h4><p>帧对象表示python的执行栈帧。<br>帧对象包含python解释器在运行时所需要知道的所有信息。它的属性包括指向上一帧的链接，正在被执行的代码，本地及全局名称空间字典及当前指令等。<br>每次函数调用产生一个新的帧，每一个帧对象都会相应创建一个C栈帧。<br>用到帧对象的一个地方是跟踪记录对象。  </p>
+<h4 id="1-4-3-跟踪记录对象"><a href="#1-4-3-跟踪记录对象" class="headerlink" title="1.4.3 跟踪记录对象"></a>1.4.3 跟踪记录对象</h4><p>代码出错时，python会引发一个异常。<br>如果异常未被捕获和处理，解释器会退出脚本运行，显示诊断信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Traceback (innermost last):</span><br><span class="line">    File &quot;&lt;stdin&gt;&quot;, Line N? in ???</span><br><span class="line">ErrorName: error reason</span><br></pre></td></tr></table></figure></p>
 <p>异常发生时，一个包含针对异常的栈跟踪信息的跟踪记录对象被创建。<br>如果有异常处理程序，处理程序就可以访问这个跟踪记录。</p>
-<h4 id="4-4、切片对象"><a href="#4-4、切片对象" class="headerlink" title="4.4、切片对象"></a>4.4、切片对象</h4><p>切片语法：</p>
+<h4 id="1-4-4、切片对象"><a href="#1-4-4、切片对象" class="headerlink" title="1.4.4、切片对象"></a>1.4.4、切片对象</h4><p>切片语法：</p>
 <ul>
 <li>seqnence[start1:end1, start2:end2]</li>
 <li>sequence[…, start1:end1]</li>
@@ -143,14 +143,14 @@
 <li>sequence[start:end:步进值] 步进切片<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; foostr = &apos;abcde&apos;</span><br><span class="line">&gt;&gt;&gt; foostr[::-1]</span><br><span class="line">&apos;edcba&apos;</span><br><span class="line">&gt;&gt;&gt; foostr[::-2]</span><br><span class="line">&apos;eca&apos;</span><br><span class="line">&gt;&gt;&gt; foolist = [123, &apos;xba&apos;, 342.23, &apos;abc&apos;]</span><br><span class="line">&gt;&gt;&gt; foolist[::-1]</span><br><span class="line">[&apos;abc&apos;, 342.23, &apos;xba&apos;, 123]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="4-5-省略对象"><a href="#4-5-省略对象" class="headerlink" title="4.5 省略对象"></a>4.5 省略对象</h4><p>省略对象用于扩展切片中，起记号作用。<br>这个对象在切片语法中表示省略号。类似于Null对None，省略对象有一个唯一的名字Ellipsis，它的布尔值始终为True。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(...)</span><br><span class="line">Ellipsis</span><br></pre></td></tr></table></figure></p>
-<h4 id="4-6、XRange对象"><a href="#4-6、XRange对象" class="headerlink" title="4.6、XRange对象"></a>4.6、XRange对象</h4><p>内建函数xrange()会产生一个Xrange对象。<br>时range()函数的兄弟版本。</p>
-<h3 id="5、标准类型操作符"><a href="#5、标准类型操作符" class="headerlink" title="5、标准类型操作符"></a>5、标准类型操作符</h3><h4 id="5-1、对象值的比较"><a href="#5-1、对象值的比较" class="headerlink" title="5.1、对象值的比较"></a>5.1、对象值的比较</h4><p>所有的内建类型均支持比较运算。  </p>
-<h4 id="5-2、对象身份比较"><a href="#5-2、对象身份比较" class="headerlink" title="5.2、对象身份比较"></a>5.2、对象身份比较</h4><p>python提供了is和is not操作符来测试两个变量是否指向同一个对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a is b</span><br><span class="line">id(a) == id(b) #两个表达式的意义相同</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-4-5-省略对象"><a href="#1-4-5-省略对象" class="headerlink" title="1.4.5 省略对象"></a>1.4.5 省略对象</h4><p>省略对象用于扩展切片中，起记号作用。<br>这个对象在切片语法中表示省略号。类似于Null对None，省略对象有一个唯一的名字Ellipsis，它的布尔值始终为True。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(...)</span><br><span class="line">Ellipsis</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-4-6、XRange对象"><a href="#1-4-6、XRange对象" class="headerlink" title="1.4.6、XRange对象"></a>1.4.6、XRange对象</h4><p>内建函数xrange()会产生一个Xrange对象。<br>时range()函数的兄弟版本。</p>
+<h3 id="1-5、标准类型操作符"><a href="#1-5、标准类型操作符" class="headerlink" title="1.5、标准类型操作符"></a>1.5、标准类型操作符</h3><h4 id="5-1、对象值的比较"><a href="#5-1、对象值的比较" class="headerlink" title="5.1、对象值的比较"></a>5.1、对象值的比较</h4><p>所有的内建类型均支持比较运算。  </p>
+<h4 id="1-5-2、对象身份比较"><a href="#1-5-2、对象身份比较" class="headerlink" title="1.5.2、对象身份比较"></a>1.5.2、对象身份比较</h4><p>python提供了is和is not操作符来测试两个变量是否指向同一个对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a is b</span><br><span class="line">id(a) == id(b) #两个表达式的意义相同</span><br></pre></td></tr></table></figure></p>
 <h5 id="注：整形对象和字符串对象是不可变对象，所以python会缓存它们。"><a href="#注：整形对象和字符串对象是不可变对象，所以python会缓存它们。" class="headerlink" title="注：整形对象和字符串对象是不可变对象，所以python会缓存它们。"></a>注：整形对象和字符串对象是不可变对象，所以python会缓存它们。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = 1</span><br><span class="line">&gt;&gt;&gt; id(a)</span><br><span class="line">1234567</span><br><span class="line">&gt;&gt;&gt; b = 1</span><br><span class="line">&gt;&gt;&gt; id(b)</span><br><span class="line">1234567</span><br><span class="line">&gt;&gt;&gt; c = 1.0</span><br><span class="line">&gt;&gt;&gt; id(c)</span><br><span class="line">2345678</span><br><span class="line">&gt;&gt;&gt; d = 1.0</span><br><span class="line">&gt;&gt;&gt; id(d)</span><br><span class="line">2345689</span><br></pre></td></tr></table></figure>
 <p>另外字符串似乎不会缓存，此处待验证。</p>
-<h4 id="5-3-布尔类型"><a href="#5-3-布尔类型" class="headerlink" title="5.3 布尔类型"></a>5.3 布尔类型</h4><p>布尔逻辑操作符 and or not。<br>三个操作符中not的优先级最高。  </p>
-<h3 id="6、标准类型内建函数"><a href="#6、标准类型内建函数" class="headerlink" title="6、标准类型内建函数"></a>6、标准类型内建函数</h3><ul>
+<h4 id="1-5-3-布尔类型"><a href="#1-5-3-布尔类型" class="headerlink" title="1.5.3 布尔类型"></a>1.5.3 布尔类型</h4><p>布尔逻辑操作符 and or not。<br>三个操作符中not的优先级最高。  </p>
+<h3 id="1-6、标准类型内建函数"><a href="#1-6、标准类型内建函数" class="headerlink" title="1.6、标准类型内建函数"></a>1.6、标准类型内建函数</h3><ul>
 <li>cmp()</li>
 <li>type()</li>
 <li>str() repr() <code></code>    <ul>
@@ -160,7 +160,7 @@
 <li>ininstance()</li>
 <li>…</li>
 </ul>
-<h3 id="7、类型工厂函数"><a href="#7、类型工厂函数" class="headerlink" title="7、类型工厂函数"></a>7、类型工厂函数</h3><p>所有的内建函数如今都是类。<br>在此基础上，原来的内建转换函数如int()、type()、list()等，都成了工厂函数。<br>意即虽然看上去像函数，实质上是类。<br>调用它们时，实际上生成了该类型的一个实例，就像工厂生产货物一样。<br>例如</p>
+<h3 id="1-7、类型工厂函数"><a href="#1-7、类型工厂函数" class="headerlink" title="1.7、类型工厂函数"></a>1.7、类型工厂函数</h3><p>所有的内建函数如今都是类。<br>在此基础上，原来的内建转换函数如int()、type()、list()等，都成了工厂函数。<br>意即虽然看上去像函数，实质上是类。<br>调用它们时，实际上生成了该类型的一个实例，就像工厂生产货物一样。<br>例如</p>
 <ul>
 <li>int() long() float() complex()</li>
 <li>str() unicode() basestring()</li>
@@ -176,7 +176,7 @@
 <li>property()</li>
 <li>file()</li>
 </ul>
-<h3 id="8、标准类型的分类"><a href="#8、标准类型的分类" class="headerlink" title="8、标准类型的分类"></a>8、标准类型的分类</h3><table>
+<h3 id="1-8、标准类型的分类"><a href="#1-8、标准类型的分类" class="headerlink" title="1.8、标准类型的分类"></a>1.8、标准类型的分类</h3><table>
 <thead>
 <tr>
 <th>数据类型</th>
@@ -218,7 +218,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="9、不支持的类型"><a href="#9、不支持的类型" class="headerlink" title="9、不支持的类型"></a>9、不支持的类型</h3><ul>
+<h3 id="1-9、不支持的类型"><a href="#1-9、不支持的类型" class="headerlink" title="1.9、不支持的类型"></a>1.9、不支持的类型</h3><ul>
 <li>byte char</li>
 <li>指针</li>
 <li>int vs short vs long<ul>
@@ -231,13 +231,13 @@
 </li>
 </ul>
 <hr>
-<h2 id="第二章、数字"><a href="#第二章、数字" class="headerlink" title="第二章、数字"></a>第二章、数字</h2><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p>删除数字对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del i</span><br><span class="line">del a, b, c</span><br></pre></td></tr></table></figure></p>
-<h4 id="1-1、复数"><a href="#1-1、复数" class="headerlink" title="1.1、复数"></a>1.1、复数</h4><p>real+imagj<br>复数的内建属性<br>|属性|描述|<br>|—|—|<br>|num.real|实部|<br>|num.imag|虚部|<br>|num.conjugate()|共轭复数|</p>
-<h4 id="1-2、除法"><a href="#1-2、除法" class="headerlink" title="1.2、除法"></a>1.2、除法</h4><p>地板除<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 1 // 2</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; -1 // 2</span><br><span class="line">-1</span><br></pre></td></tr></table></figure></p>
-<h4 id="1-3、取余"><a href="#1-3、取余" class="headerlink" title="1.3、取余"></a>1.3、取余</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x-(math.floor(x/y)*y)</span><br></pre></td></tr></table></figure>
+<h2 id="第二章、数字"><a href="#第二章、数字" class="headerlink" title="第二章、数字"></a>第二章、数字</h2><h3 id="2-1、简介"><a href="#2-1、简介" class="headerlink" title="2.1、简介"></a>2.1、简介</h3><p>删除数字对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del i</span><br><span class="line">del a, b, c</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-1-1、复数"><a href="#2-1-1、复数" class="headerlink" title="2.1.1、复数"></a>2.1.1、复数</h4><p>real+imagj<br>复数的内建属性<br>|属性|描述|<br>|—|—|<br>|num.real|实部|<br>|num.imag|虚部|<br>|num.conjugate()|共轭复数|</p>
+<h4 id="2-1-2、除法"><a href="#2-1-2、除法" class="headerlink" title="2.1.2、除法"></a>2.1.2、除法</h4><p>地板除<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 1 // 2</span><br><span class="line">0</span><br><span class="line">&gt;&gt;&gt; -1 // 2</span><br><span class="line">-1</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-1-3、取余"><a href="#2-1-3、取余" class="headerlink" title="2.1.3、取余"></a>2.1.3、取余</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x-(math.floor(x/y)*y)</span><br></pre></td></tr></table></figure>
 <p>对于复数，取余仅取其实数部分。</p>
-<h4 id="1-4、幂运算"><a href="#1-4、幂运算" class="headerlink" title="1.4、幂运算"></a>1.4、幂运算</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a ** b</span><br></pre></td></tr></table></figure>
-<h3 id="2、内建函数与工厂函数"><a href="#2、内建函数与工厂函数" class="headerlink" title="2、内建函数与工厂函数"></a>2、内建函数与工厂函数</h3><p>功能函数</p>
+<h4 id="2-1-4、幂运算"><a href="#2-1-4、幂运算" class="headerlink" title="2.1.4、幂运算"></a>2.1.4、幂运算</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a ** b</span><br></pre></td></tr></table></figure>
+<h3 id="2-2、内建函数与工厂函数"><a href="#2-2、内建函数与工厂函数" class="headerlink" title="2.2、内建函数与工厂函数"></a>2.2、内建函数与工厂函数</h3><p>功能函数</p>
 <ul>
 <li>abs()</li>
 <li>corece()<ul>
@@ -255,7 +255,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="3、相关模块"><a href="#3、相关模块" class="headerlink" title="3、相关模块"></a>3、相关模块</h3><table>
+<h3 id="2-3、相关模块"><a href="#2-3、相关模块" class="headerlink" title="2.3、相关模块"></a>2.3、相关模块</h3><table>
 <thead>
 <tr>
 <th>模块</th>
@@ -290,9 +290,9 @@
 <hr>
 <h2 id="第三章序列"><a href="#第三章序列" class="headerlink" title="第三章序列"></a>第三章序列</h2><p>序列包括字符串、列表、元组。</p>
 <hr>
-<h2 id="第四章、映射和集合类型"><a href="#第四章、映射和集合类型" class="headerlink" title="第四章、映射和集合类型"></a>第四章、映射和集合类型</h2><h3 id="1、映射类型：字典"><a href="#1、映射类型：字典" class="headerlink" title="1、映射类型：字典"></a>1、映射类型：字典</h3><p>字典是python语言中唯一的映射类型。  </p>
-<h2 id="第五章、条件和集合"><a href="#第五章、条件和集合" class="headerlink" title="第五章、条件和集合"></a>第五章、条件和集合</h2><h2 id="第六章、文件输入和输出"><a href="#第六章、文件输入和输出" class="headerlink" title="第六章、文件输入和输出"></a>第六章、文件输入和输出</h2><h2 id="第七章、错误和异常"><a href="#第七章、错误和异常" class="headerlink" title="第七章、错误和异常"></a>第七章、错误和异常</h2><h2 id="第八章、函数和函数式编程"><a href="#第八章、函数和函数式编程" class="headerlink" title="第八章、函数和函数式编程"></a>第八章、函数和函数式编程</h2><h2 id="第九章、模块"><a href="#第九章、模块" class="headerlink" title="第九章、模块"></a>第九章、模块</h2><h2 id="第十章、面向对象编程"><a href="#第十章、面向对象编程" class="headerlink" title="第十章、面向对象编程"></a>第十章、面向对象编程</h2><h2 id="第十一章、执行环境"><a href="#第十一章、执行环境" class="headerlink" title="第十一章、执行环境"></a>第十一章、执行环境</h2><h2 id="第十二章、正则表达式"><a href="#第十二章、正则表达式" class="headerlink" title="第十二章、正则表达式"></a>第十二章、正则表达式</h2><h3 id="1、引言"><a href="#1、引言" class="headerlink" title="1、引言"></a>1、引言</h3><p>正则表达式(RE)</p>
-<h3 id="2、正则表达式使用的符号和字符"><a href="#2、正则表达式使用的符号和字符" class="headerlink" title="2、正则表达式使用的符号和字符"></a>2、正则表达式使用的符号和字符</h3><table>
+<h2 id="第四章、映射和集合类型"><a href="#第四章、映射和集合类型" class="headerlink" title="第四章、映射和集合类型"></a>第四章、映射和集合类型</h2><h3 id="4-1、映射类型：字典"><a href="#4-1、映射类型：字典" class="headerlink" title="4.1、映射类型：字典"></a>4.1、映射类型：字典</h3><p>字典是python语言中唯一的映射类型。  </p>
+<h2 id="第五章、条件和集合"><a href="#第五章、条件和集合" class="headerlink" title="第五章、条件和集合"></a>第五章、条件和集合</h2><h2 id="第六章、文件输入和输出"><a href="#第六章、文件输入和输出" class="headerlink" title="第六章、文件输入和输出"></a>第六章、文件输入和输出</h2><h2 id="第七章、错误和异常"><a href="#第七章、错误和异常" class="headerlink" title="第七章、错误和异常"></a>第七章、错误和异常</h2><h2 id="第八章、函数和函数式编程"><a href="#第八章、函数和函数式编程" class="headerlink" title="第八章、函数和函数式编程"></a>第八章、函数和函数式编程</h2><h2 id="第九章、模块"><a href="#第九章、模块" class="headerlink" title="第九章、模块"></a>第九章、模块</h2><h2 id="第十章、面向对象编程"><a href="#第十章、面向对象编程" class="headerlink" title="第十章、面向对象编程"></a>第十章、面向对象编程</h2><h2 id="第十一章、执行环境"><a href="#第十一章、执行环境" class="headerlink" title="第十一章、执行环境"></a>第十一章、执行环境</h2><h2 id="第十二章、正则表达式"><a href="#第十二章、正则表达式" class="headerlink" title="第十二章、正则表达式"></a>第十二章、正则表达式</h2><h3 id="12-1、引言"><a href="#12-1、引言" class="headerlink" title="12.1、引言"></a>12.1、引言</h3><p>正则表达式(RE)</p>
+<h3 id="12-2、正则表达式使用的符号和字符"><a href="#12-2、正则表达式使用的符号和字符" class="headerlink" title="12.2、正则表达式使用的符号和字符"></a>12.2、正则表达式使用的符号和字符</h3><table>
 <thead>
 <tr>
 <th>记号</th>
@@ -422,7 +422,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="3、正则表达式和Python语言"><a href="#3、正则表达式和Python语言" class="headerlink" title="3、正则表达式和Python语言"></a>3、正则表达式和Python语言</h3><h4 id="3-1-re模块：核心函数和方法"><a href="#3-1-re模块：核心函数和方法" class="headerlink" title="3.1 re模块：核心函数和方法"></a>3.1 re模块：核心函数和方法</h4><table>
+<h3 id="12-3、正则表达式和Python语言"><a href="#12-3、正则表达式和Python语言" class="headerlink" title="12.3、正则表达式和Python语言"></a>12.3、正则表达式和Python语言</h3><h4 id="12-3-1-re模块：核心函数和方法"><a href="#12-3-1-re模块：核心函数和方法" class="headerlink" title="12.3.1 re模块：核心函数和方法"></a>12.3.1 re模块：核心函数和方法</h4><table>
 <thead>
 <tr>
 <th>函数/方法</th>
@@ -477,21 +477,21 @@
 </tr>
 </tbody>
 </table>
-<h4 id="3-2-搜索与匹配"><a href="#3-2-搜索与匹配" class="headerlink" title="3.2 搜索与匹配"></a>3.2 搜索与匹配</h4><p>即match与search函数的比较。<br>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; m = re.match(&apos;foo&apos;, &apos;seafood&apos;)</span><br><span class="line">&gt;&gt;&gt; if m is not None: m.group()</span><br></pre></td></tr></table></figure></p>
+<h4 id="12-3-2-搜索与匹配"><a href="#12-3-2-搜索与匹配" class="headerlink" title="12.3.2 搜索与匹配"></a>12.3.2 搜索与匹配</h4><p>即match与search函数的比较。<br>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; m = re.match(&apos;foo&apos;, &apos;seafood&apos;)</span><br><span class="line">&gt;&gt;&gt; if m is not None: m.group()</span><br></pre></td></tr></table></figure></p>
 <p>会提示没有匹配成功，因为foo虽然在字符串seafood中，但是不是对应开头。<br>使用search函数会匹配成功。  </p>
 <hr>
-<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h3 id="1、引言-1"><a href="#1、引言-1" class="headerlink" title="1、引言"></a>1、引言</h3><h4 id="1-1-客户端、服务器架构"><a href="#1-1-客户端、服务器架构" class="headerlink" title="1.1 客户端、服务器架构"></a>1.1 客户端、服务器架构</h4><p>服务器存在的目的是等待客户端的请求，给这些客户服务，然后再等待其他的请求。</p>
-<h3 id="2-套接字"><a href="#2-套接字" class="headerlink" title="2.套接字"></a>2.套接字</h3><h4 id="2-1、套接字也被称作进程间通讯，或IPC。"><a href="#2-1、套接字也被称作进程间通讯，或IPC。" class="headerlink" title="2.1、套接字也被称作进程间通讯，或IPC。"></a>2.1、套接字也被称作进程间通讯，或IPC。</h4><p>套接字有两种，基于文件型的和基于网络型的。  </p>
+<h2 id="第十三章、网络编程"><a href="#第十三章、网络编程" class="headerlink" title="第十三章、网络编程"></a>第十三章、网络编程</h2><h3 id="13-1、引言"><a href="#13-1、引言" class="headerlink" title="13.1、引言"></a>13.1、引言</h3><h4 id="13-1-1-客户端、服务器架构"><a href="#13-1-1-客户端、服务器架构" class="headerlink" title="13.1.1 客户端、服务器架构"></a>13.1.1 客户端、服务器架构</h4><p>服务器存在的目的是等待客户端的请求，给这些客户服务，然后再等待其他的请求。</p>
+<h3 id="13-2-套接字"><a href="#13-2-套接字" class="headerlink" title="13.2.套接字"></a>13.2.套接字</h3><h4 id="13-2-1、套接字也被称作进程间通讯，或IPC。"><a href="#13-2-1、套接字也被称作进程间通讯，或IPC。" class="headerlink" title="13.2.1、套接字也被称作进程间通讯，或IPC。"></a>13.2.1、套接字也被称作进程间通讯，或IPC。</h4><p>套接字有两种，基于文件型的和基于网络型的。  </p>
 <ul>
 <li>AF_UNIX</li>
 <li>AF_INET</li>
-<li>AF_NETLINK<br>python只支持AF_UNIX，AF_NETLINK，AF_INET  <h4 id="2-2、套接字地址"><a href="#2-2、套接字地址" class="headerlink" title="2.2、套接字地址"></a>2.2、套接字地址</h4>端口号范围是0-65535.<br>可以通话/etc/services文件获得保留的端口号。  <h4 id="2-3、面向连接和无连接"><a href="#2-3、面向连接和无连接" class="headerlink" title="2.3、面向连接和无连接"></a>2.3、面向连接和无连接</h4><h5 id="1、面向连接"><a href="#1、面向连接" class="headerlink" title="1、面向连接"></a>1、面向连接</h5>主要协议是传输控制协议（即TCP）。<h5 id="2、无连接"><a href="#2、无连接" class="headerlink" title="2、无连接"></a>2、无连接</h5>协议是用户数据报协议（即UDP）。</li>
+<li>AF_NETLINK<br>python只支持AF_UNIX，AF_NETLINK，AF_INET  <h4 id="13-2-2、套接字地址"><a href="#13-2-2、套接字地址" class="headerlink" title="13.2.2、套接字地址"></a>13.2.2、套接字地址</h4>端口号范围是0-65535.<br>可以通话/etc/services文件获得保留的端口号。  <h4 id="13-2-3、面向连接和无连接"><a href="#13-2-3、面向连接和无连接" class="headerlink" title="13.2.3、面向连接和无连接"></a>13.2.3、面向连接和无连接</h4><h5 id="13-1、面向连接"><a href="#13-1、面向连接" class="headerlink" title="13.1、面向连接"></a>13.1、面向连接</h5>主要协议是传输控制协议（即TCP）。<h5 id="13-2、无连接"><a href="#13-2、无连接" class="headerlink" title="13.2、无连接"></a>13.2、无连接</h5>协议是用户数据报协议（即UDP）。</li>
 </ul>
-<h3 id="3、网络编程"><a href="#3、网络编程" class="headerlink" title="3、网络编程"></a>3、网络编程</h3><p>使用socket模块。</p>
-<h4 id="3-1、socket-模块函数"><a href="#3-1、socket-模块函数" class="headerlink" title="3.1、socket()模块函数"></a>3.1、socket()模块函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socket(socket_family, socket_type, protocol=0)</span><br></pre></td></tr></table></figure>
+<h3 id="13-3、网络编程"><a href="#13-3、网络编程" class="headerlink" title="13.3、网络编程"></a>13.3、网络编程</h3><p>使用socket模块。</p>
+<h4 id="13-3-1、socket-模块函数"><a href="#13-3-1、socket-模块函数" class="headerlink" title="13.3.1、socket()模块函数"></a>13.3.1、socket()模块函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socket(socket_family, socket_type, protocol=0)</span><br></pre></td></tr></table></figure>
 <p>例如，创建一个TCP/IP的套接字，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpSock = socket.socket( socket.AF_INET, socket.SOCK_STREAM )</span><br></pre></td></tr></table></figure></p>
 <p>若创建一个基于UDP/IP的套接字，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">udpSock = socket.socket( socket.AF_INET, socket.SOCK_DGRAM )</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-2套接字对象方法"><a href="#3-2套接字对象方法" class="headerlink" title="3.2套接字对象方法"></a>3.2套接字对象方法</h4><table>
+<h4 id="13-3-2套接字对象方法"><a href="#13-3-2套接字对象方法" class="headerlink" title="13.3.2套接字对象方法"></a>13.3.2套接字对象方法</h4><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -596,17 +596,17 @@
 </tr>
 </tbody>
 </table>
-<h4 id="3-3、创建一个TCP服务器"><a href="#3-3、创建一个TCP服务器" class="headerlink" title="3.3、创建一个TCP服务器"></a>3.3、创建一个TCP服务器</h4><p>示例如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    ss = socket()           # 创建服务器套接字</span><br><span class="line">    ss.bind()               # 把地址绑定到套接字上</span><br><span class="line">    ss.listen()             # 监听连接</span><br><span class="line">    inf_loop:               # 服务器无限循环</span><br><span class="line">        cs = ss.accept()    # 接受客户端连接</span><br><span class="line">    comm_loop:              # 通信循环</span><br><span class="line">        cs.recv()/cs.send() # 对话</span><br><span class="line">    cs.close                # 关闭客户端套接字</span><br><span class="line">ss.close                    # 关闭服务器套接字</span><br></pre></td></tr></table></figure></p>
+<h4 id="13-3-3、创建一个TCP服务器"><a href="#13-3-3、创建一个TCP服务器" class="headerlink" title="13.3.3、创建一个TCP服务器"></a>13.3.3、创建一个TCP服务器</h4><p>示例如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    ss = socket()           # 创建服务器套接字</span><br><span class="line">    ss.bind()               # 把地址绑定到套接字上</span><br><span class="line">    ss.listen()             # 监听连接</span><br><span class="line">    inf_loop:               # 服务器无限循环</span><br><span class="line">        cs = ss.accept()    # 接受客户端连接</span><br><span class="line">    comm_loop:              # 通信循环</span><br><span class="line">        cs.recv()/cs.send() # 对话</span><br><span class="line">    cs.close                # 关闭客户端套接字</span><br><span class="line">ss.close                    # 关闭服务器套接字</span><br></pre></td></tr></table></figure></p>
 <p>所有的套接字都用socket.socker()函数来创建。<br>服务器需要“坐在某个端口上“等待请求。所以它们必须绑定到一个bending的地址上。<br>由于</p>
 <p>HOST变量设为空，表示bind()函数可以绑定在所有有效的地址上。</p>
-<h4 id="3-4、创建TCP客户端"><a href="#3-4、创建TCP客户端" class="headerlink" title="3.4、创建TCP客户端"></a>3.4、创建TCP客户端</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cs = socket()               # 创建客户端套接字</span><br><span class="line">cs.connect()                # 尝试连接服务器</span><br><span class="line">comm_loop:                  # 通信循环</span><br><span class="line">    cs.send()/cs.recv()     # 对话</span><br><span class="line">cs.close()                  # 关闭客户端套接字</span><br></pre></td></tr></table></figure>
-<h4 id="3-5、运行客户端与服务器"><a href="#3-5、运行客户端与服务器" class="headerlink" title="3.5、运行客户端与服务器"></a>3.5、运行客户端与服务器</h4><p>先运行服务器端。</p>
-<h4 id="3-6、创建一个UDP服务器"><a href="#3-6、创建一个UDP服务器" class="headerlink" title="3.6、创建一个UDP服务器"></a>3.6、创建一个UDP服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ss = socket</span><br><span class="line">ss.bind()</span><br><span class="line">inf_loop:</span><br><span class="line">    cs = ss.recvfrom()/ss.sendto()</span><br><span class="line">ss.close()</span><br></pre></td></tr></table></figure>
-<h4 id="3-7、创建一个UDP客户端"><a href="#3-7、创建一个UDP客户端" class="headerlink" title="3.7、创建一个UDP客户端"></a>3.7、创建一个UDP客户端</h4><h4 id="3-8、执行客户端和服务器"><a href="#3-8、执行客户端和服务器" class="headerlink" title="3.8、执行客户端和服务器"></a>3.8、执行客户端和服务器</h4><h4 id="3-9、Socket模块属性"><a href="#3-9、Socket模块属性" class="headerlink" title="3.9、Socket模块属性"></a>3.9、Socket模块属性</h4><h3 id="4、SocketServer属性"><a href="#4、SocketServer属性" class="headerlink" title="4、SocketServer属性"></a>4、SocketServer属性</h3><h3 id="5、Twisted框架"><a href="#5、Twisted框架" class="headerlink" title="5、Twisted框架"></a>5、Twisted框架</h3>
+<h4 id="13-3-4、创建TCP客户端"><a href="#13-3-4、创建TCP客户端" class="headerlink" title="13.3.4、创建TCP客户端"></a>13.3.4、创建TCP客户端</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cs = socket()               # 创建客户端套接字</span><br><span class="line">cs.connect()                # 尝试连接服务器</span><br><span class="line">comm_loop:                  # 通信循环</span><br><span class="line">    cs.send()/cs.recv()     # 对话</span><br><span class="line">cs.close()                  # 关闭客户端套接字</span><br></pre></td></tr></table></figure>
+<h4 id="13-3-5、运行客户端与服务器"><a href="#13-3-5、运行客户端与服务器" class="headerlink" title="13.3.5、运行客户端与服务器"></a>13.3.5、运行客户端与服务器</h4><p>先运行服务器端。</p>
+<h4 id="13-3-6、创建一个UDP服务器"><a href="#13-3-6、创建一个UDP服务器" class="headerlink" title="13.3.6、创建一个UDP服务器"></a>13.3.6、创建一个UDP服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ss = socket</span><br><span class="line">ss.bind()</span><br><span class="line">inf_loop:</span><br><span class="line">    cs = ss.recvfrom()/ss.sendto()</span><br><span class="line">ss.close()</span><br></pre></td></tr></table></figure>
+<h4 id="13-3-7、创建一个UDP客户端"><a href="#13-3-7、创建一个UDP客户端" class="headerlink" title="13.3.7、创建一个UDP客户端"></a>13.3.7、创建一个UDP客户端</h4><h4 id="13-3-8、执行客户端和服务器"><a href="#13-3-8、执行客户端和服务器" class="headerlink" title="13.3.8、执行客户端和服务器"></a>13.3.8、执行客户端和服务器</h4><h4 id="13-3-9、Socket模块属性"><a href="#13-3-9、Socket模块属性" class="headerlink" title="13.3.9、Socket模块属性"></a>13.3.9、Socket模块属性</h4><h3 id="13-4、SocketServer属性"><a href="#13-4、SocketServer属性" class="headerlink" title="13.4、SocketServer属性"></a>13.4、SocketServer属性</h3><h3 id="13-5、Twisted框架"><a href="#13-5、Twisted框架" class="headerlink" title="13.5、Twisted框架"></a>13.5、Twisted框架</h3><h2 id="第十四章、网络客户端编程"><a href="#第十四章、网络客户端编程" class="headerlink" title="第十四章、网络客户端编程"></a>第十四章、网络客户端编程</h2><h2 id="第十五章、多线程编程"><a href="#第十五章、多线程编程" class="headerlink" title="第十五章、多线程编程"></a>第十五章、多线程编程</h2><h2 id="第十六章、图形用户界面编程"><a href="#第十六章、图形用户界面编程" class="headerlink" title="第十六章、图形用户界面编程"></a>第十六章、图形用户界面编程</h2><h2 id="第十七章、Web编程"><a href="#第十七章、Web编程" class="headerlink" title="第十七章、Web编程"></a>第十七章、Web编程</h2><h2 id="第十八章、数据库编程"><a href="#第十八章、数据库编程" class="headerlink" title="第十八章、数据库编程"></a>第十八章、数据库编程</h2><h2 id="第十九章、扩展Python"><a href="#第十九章、扩展Python" class="headerlink" title="第十九章、扩展Python"></a>第十九章、扩展Python</h2><h2 id="第二十章、其他"><a href="#第二十章、其他" class="headerlink" title="第二十章、其他"></a>第二十章、其他</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/09/Python总结/" data-id="cjeldovfq0000ucuscc84jw8b" class="article-share-link">Partager</a>
+      <a data-url="http://www.meczhang.com/2018/03/09/Python总结/" data-id="cjeldx2sn0000b8usf45sxcag" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -651,7 +651,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/09/hello-world/" data-id="cjeldovfu0001ucusvvbj2j7h" class="article-share-link">Partager</a>
+      <a data-url="http://www.meczhang.com/2018/03/09/hello-world/" data-id="cjeldx2st0001b8uslh5sh837" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -677,7 +677,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
     </div>
@@ -687,7 +687,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
@@ -712,7 +712,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 张云涛<br>
-      Propulsé par <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
