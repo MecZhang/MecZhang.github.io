@@ -53,9 +53,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
@@ -80,7 +80,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/09/Python总结/">Python总结</a>
+      <a class="article-title" href="/2018/03/09/Python总结/">《Python核心编程》读书笔记</a>
     </h1>
   
 
@@ -289,11 +289,324 @@
 <p>|random模块常用函数|介绍|<br>|randint()|两个整型参数，返回二者之间的随机整型|<br>|randrange()|接受同range()同样的参数，随即返回range([start],stop,[step])结果的一项|<br>|uniform()|同randint()，但是返回的时浮点型|<br>|random()|类似于uniform()，只是下限恒等于0.0，上限恒为1.0|<br>|choice()|随机返回给定序列的一个元素|</p>
 <hr>
 <h2 id="第三章序列"><a href="#第三章序列" class="headerlink" title="第三章序列"></a>第三章序列</h2><p>序列包括字符串、列表、元组。</p>
-
+<hr>
+<h2 id="第四章、映射和集合类型"><a href="#第四章、映射和集合类型" class="headerlink" title="第四章、映射和集合类型"></a>第四章、映射和集合类型</h2><h3 id="1、映射类型：字典"><a href="#1、映射类型：字典" class="headerlink" title="1、映射类型：字典"></a>1、映射类型：字典</h3><p>字典是python语言中唯一的映射类型。  </p>
+<h2 id="第五章、条件和集合"><a href="#第五章、条件和集合" class="headerlink" title="第五章、条件和集合"></a>第五章、条件和集合</h2><h2 id="第六章、文件输入和输出"><a href="#第六章、文件输入和输出" class="headerlink" title="第六章、文件输入和输出"></a>第六章、文件输入和输出</h2><h2 id="第七章、错误和异常"><a href="#第七章、错误和异常" class="headerlink" title="第七章、错误和异常"></a>第七章、错误和异常</h2><h2 id="第八章、函数和函数式编程"><a href="#第八章、函数和函数式编程" class="headerlink" title="第八章、函数和函数式编程"></a>第八章、函数和函数式编程</h2><h2 id="第九章、模块"><a href="#第九章、模块" class="headerlink" title="第九章、模块"></a>第九章、模块</h2><h2 id="第十章、面向对象编程"><a href="#第十章、面向对象编程" class="headerlink" title="第十章、面向对象编程"></a>第十章、面向对象编程</h2><h2 id="第十一章、执行环境"><a href="#第十一章、执行环境" class="headerlink" title="第十一章、执行环境"></a>第十一章、执行环境</h2><h2 id="第十二章、正则表达式"><a href="#第十二章、正则表达式" class="headerlink" title="第十二章、正则表达式"></a>第十二章、正则表达式</h2><h3 id="1、引言"><a href="#1、引言" class="headerlink" title="1、引言"></a>1、引言</h3><p>正则表达式(RE)</p>
+<h3 id="2、正则表达式使用的符号和字符"><a href="#2、正则表达式使用的符号和字符" class="headerlink" title="2、正则表达式使用的符号和字符"></a>2、正则表达式使用的符号和字符</h3><table>
+<thead>
+<tr>
+<th>记号</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>literal</td>
+<td>匹配字符串的值</td>
+<td>foo</td>
+</tr>
+<tr>
+<td>re1\</td>
+<td>re2</td>
+<td>匹配正则表达式re1或者re2</td>
+<td>foo\</td>
+<td>bar</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配任何字符（换行符除外）</td>
+<td>b.b</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串的开始</td>
+<td>^Dear</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串的结尾</td>
+<td>/bin/*sh$</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配前面出现的正则表达式零次或n次</td>
+<td>[A-Za-z0-9]*</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前面出现的正则表达式一次或多次</td>
+<td>[a-z]+\.com</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配前面出现的正则表达式零次或一次</td>
+<td>goo?</td>
+</tr>
+<tr>
+<td>{N}</td>
+<td>匹配前面出现的正则表达式N</td>
+<td>[0-9]{3}</td>
+</tr>
+<tr>
+<td>{M,N}</td>
+<td>匹配重复出现M次到N次的正则表达撒</td>
+<td>[0-9]{5,9}</td>
+</tr>
+<tr>
+<td>[…]</td>
+<td>匹配字符组里出现的任意一个字符</td>
+<td>[aeiou]</td>
+</tr>
+<tr>
+<td>[..x-y..]</td>
+<td>匹配字符x到y中的任意一个字符</td>
+<td>[0-9],[A-Za-z]</td>
+</tr>
+<tr>
+<td>[^..]</td>
+<td>不匹配此字符集中出现的任何一个符号，<br>包括某一范围内的字符</td>
+<td>[^aeiou],[^A-Za-z0-9_]</td>
+</tr>
+<tr>
+<td>(*\</td>
+<td>+\</td>
+<td>?\</td>
+<td>{})?</td>
+<td>用于匹配上面出现的任何“非贪婪”。版本重复匹配次数符号</td>
+<td>.*?[a-z]</td>
+</tr>
+<tr>
+<td>(…)</td>
+<td>匹配封闭括号中正则表达式，并保存为子组</td>
+<td>(0-9){3})?,f(oo</td>
+<td>u)bar</td>
+</tr>
+<tr>
+<td>特殊字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配任何数字，和[0-9]一样（\D是\d的反义：任何非数字符）</td>
+<td>data\d+.txt</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配任何数字字母符号，和[A-Za-z0-9_]相同（\W为其反义）</td>
+<td>[A-Za-z_]\w+</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任何空白字符，和[\n\t\v\f]相同（\S为其反义）</td>
+<td>of\sthe</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配任何单词边界（\B为其反义）</td>
+<td>\b\The\b</td>
+</tr>
+<tr>
+<td>\nn</td>
+<td>匹配已保存的子组（请参考上面的正则表达式符号(…)</td>
+<td>price:\16</td>
+</tr>
+<tr>
+<td>\c</td>
+<td>逐一匹配特殊字符c</td>
+<td>., \, *</td>
+</tr>
+<tr>
+<td>\A(\Z)</td>
+<td>匹配字符串的起始（结束）</td>
+<td>\Adear</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3、正则表达式和Python语言"><a href="#3、正则表达式和Python语言" class="headerlink" title="3、正则表达式和Python语言"></a>3、正则表达式和Python语言</h3><h4 id="3-1-re模块：核心函数和方法"><a href="#3-1-re模块：核心函数和方法" class="headerlink" title="3.1 re模块：核心函数和方法"></a>3.1 re模块：核心函数和方法</h4><table>
+<thead>
+<tr>
+<th>函数/方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>函数</td>
+</tr>
+<tr>
+<td>compile(pattern, flags=0)</td>
+<td>对正则表达式pattern进行变异，flags是可选标识符，并返回一个regex对象</td>
+</tr>
+<tr>
+<td>re模块的函数和regex对象的方法</td>
+</tr>
+<tr>
+<td>match(pattern, string, flags=0)</td>
+<td>尝试用正则表达式模式pattern匹配字符串string，flags是可选的，<br>若匹配成功，则返回一个匹配对象，否则返回None</td>
+</tr>
+<tr>
+<td>search(pattern, string, flages=0)</td>
+<td>搜索string中表达式模式pattern的第一次出现</td>
+</tr>
+<tr>
+<td>findall(pattern, string[, flags])</td>
+<td>搜索pattern的所有出现，返回一个匹配对象的列表</td>
+</tr>
+<tr>
+<td>fingiter(pattern, string[, flags])</td>
+<td>同findall()，但是返回的是迭代器</td>
+</tr>
+<tr>
+<td>split(pattern, string, max=0)</td>
+<td>根据pattern中的分隔符把string分割为一个列表，返回匹配成功的列表</td>
+</tr>
+<tr>
+<td>sub(pattern, repl, string, max=0)</td>
+<td>把string中匹配pattern的地方替换为repl，返回替换次数的数值</td>
+</tr>
+<tr>
+<td>匹配对象的方法</td>
+</tr>
+<tr>
+<td>group(num=0)</td>
+<td>返回全部匹配对象</td>
+</tr>
+<tr>
+<td>groups()</td>
+<td>返回一个包含全部匹配的子组的元组（若没有成功，返回一个空元组）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-2-搜索与匹配"><a href="#3-2-搜索与匹配" class="headerlink" title="3.2 搜索与匹配"></a>3.2 搜索与匹配</h4><p>即match与search函数的比较。<br>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; m = re.match(&apos;foo&apos;, &apos;seafood&apos;)</span><br><span class="line">&gt;&gt;&gt; if m is not None: m.group()</span><br></pre></td></tr></table></figure></p>
+<p>会提示没有匹配成功，因为foo虽然在字符串seafood中，但是不是对应开头。<br>使用search函数会匹配成功。  </p>
+<hr>
+<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><h3 id="1、引言-1"><a href="#1、引言-1" class="headerlink" title="1、引言"></a>1、引言</h3><h4 id="1-1-客户端、服务器架构"><a href="#1-1-客户端、服务器架构" class="headerlink" title="1.1 客户端、服务器架构"></a>1.1 客户端、服务器架构</h4><p>服务器存在的目的是等待客户端的请求，给这些客户服务，然后再等待其他的请求。</p>
+<h3 id="2-套接字"><a href="#2-套接字" class="headerlink" title="2.套接字"></a>2.套接字</h3><h4 id="2-1、套接字也被称作进程间通讯，或IPC。"><a href="#2-1、套接字也被称作进程间通讯，或IPC。" class="headerlink" title="2.1、套接字也被称作进程间通讯，或IPC。"></a>2.1、套接字也被称作进程间通讯，或IPC。</h4><p>套接字有两种，基于文件型的和基于网络型的。  </p>
+<ul>
+<li>AF_UNIX</li>
+<li>AF_INET</li>
+<li>AF_NETLINK<br>python只支持AF_UNIX，AF_NETLINK，AF_INET  <h4 id="2-2、套接字地址"><a href="#2-2、套接字地址" class="headerlink" title="2.2、套接字地址"></a>2.2、套接字地址</h4>端口号范围是0-65535.<br>可以通话/etc/services文件获得保留的端口号。  <h4 id="2-3、面向连接和无连接"><a href="#2-3、面向连接和无连接" class="headerlink" title="2.3、面向连接和无连接"></a>2.3、面向连接和无连接</h4><h5 id="1、面向连接"><a href="#1、面向连接" class="headerlink" title="1、面向连接"></a>1、面向连接</h5>主要协议是传输控制协议（即TCP）。<h5 id="2、无连接"><a href="#2、无连接" class="headerlink" title="2、无连接"></a>2、无连接</h5>协议是用户数据报协议（即UDP）。</li>
+</ul>
+<h3 id="3、网络编程"><a href="#3、网络编程" class="headerlink" title="3、网络编程"></a>3、网络编程</h3><p>使用socket模块。</p>
+<h4 id="3-1、socket-模块函数"><a href="#3-1、socket-模块函数" class="headerlink" title="3.1、socket()模块函数"></a>3.1、socket()模块函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socket(socket_family, socket_type, protocol=0)</span><br></pre></td></tr></table></figure>
+<p>例如，创建一个TCP/IP的套接字，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpSock = socket.socket( socket.AF_INET, socket.SOCK_STREAM )</span><br></pre></td></tr></table></figure></p>
+<p>若创建一个基于UDP/IP的套接字，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">udpSock = socket.socket( socket.AF_INET, socket.SOCK_DGRAM )</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-2套接字对象方法"><a href="#3-2套接字对象方法" class="headerlink" title="3.2套接字对象方法"></a>3.2套接字对象方法</h4><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>服务器端套接字函数</td>
+</tr>
+<tr>
+<td>s.bind()</td>
+<td>绑定地址到套接字</td>
+</tr>
+<tr>
+<td>s.listen()</td>
+<td>开始TCP监听</td>
+</tr>
+<tr>
+<td>s.accept()</td>
+<td>被动接受TCP客户端连接，（阻塞式）等待连接的到来</td>
+</tr>
+<tr>
+<td>客户端套接字函数</td>
+</tr>
+<tr>
+<td>s.connect</td>
+<td>主动初始化TCP数据</td>
+</tr>
+<tr>
+<td>s.connect_ex()</td>
+<td>connect()函数的扩展版本，出错时返回出错码，而不是抛出异常</td>
+</tr>
+<tr>
+<td>公共用途的套接字函数</td>
+</tr>
+<tr>
+<td>s.recv()</td>
+<td>接收TCP数据</td>
+</tr>
+<tr>
+<td>s.send()</td>
+<td>发送TCP数据</td>
+</tr>
+<tr>
+<td>s.sendall()</td>
+<td>完整发送TCP数据</td>
+</tr>
+<tr>
+<td>s.recvfrom()</td>
+<td>接收UDP数据</td>
+</tr>
+<tr>
+<td>s.sendto()</td>
+<td>发送UDP数据</td>
+</tr>
+<tr>
+<td>s.getpeername()</td>
+<td>连接到当前套接字的远端的地址</td>
+</tr>
+<tr>
+<td>s.getsocketname()</td>
+<td>当前套接字的地址</td>
+</tr>
+<tr>
+<td>s.getsocketopt()</td>
+<td>返回指定套接字的参数</td>
+</tr>
+<tr>
+<td>s.setsocketopt()</td>
+<td>设置指定套接字的参数</td>
+</tr>
+<tr>
+<td>s.close()</td>
+<td>关闭套接字</td>
+</tr>
+<tr>
+<td>面向模块的套接字</td>
+</tr>
+<tr>
+<td>s.setblocking()</td>
+<td>设置套接字的阻塞与非阻塞模式</td>
+</tr>
+<tr>
+<td>s.settimeout()</td>
+<td>设置阻塞套接字操作的超时时间</td>
+</tr>
+<tr>
+<td>s.gettimeout()</td>
+<td>得到阻塞套接字操作的超时时间</td>
+</tr>
+<tr>
+<td>面向文件的套接字函数</td>
+</tr>
+<tr>
+<td>s.fileno()</td>
+<td>套接字的文件描述符</td>
+</tr>
+<tr>
+<td>s.makefile()</td>
+<td>创建一个与该套接字关联的文件对象</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-3、创建一个TCP服务器"><a href="#3-3、创建一个TCP服务器" class="headerlink" title="3.3、创建一个TCP服务器"></a>3.3、创建一个TCP服务器</h4><p>示例如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    ss = socket()           # 创建服务器套接字</span><br><span class="line">    ss.bind()               # 把地址绑定到套接字上</span><br><span class="line">    ss.listen()             # 监听连接</span><br><span class="line">    inf_loop:               # 服务器无限循环</span><br><span class="line">        cs = ss.accept()    # 接受客户端连接</span><br><span class="line">    comm_loop:              # 通信循环</span><br><span class="line">        cs.recv()/cs.send() # 对话</span><br><span class="line">    cs.close                # 关闭客户端套接字</span><br><span class="line">ss.close                    # 关闭服务器套接字</span><br></pre></td></tr></table></figure></p>
+<p>所有的套接字都用socket.socker()函数来创建。<br>服务器需要“坐在某个端口上“等待请求。所以它们必须绑定到一个bending的地址上。<br>由于</p>
+<p>HOST变量设为空，表示bind()函数可以绑定在所有有效的地址上。</p>
+<h4 id="3-4、创建TCP客户端"><a href="#3-4、创建TCP客户端" class="headerlink" title="3.4、创建TCP客户端"></a>3.4、创建TCP客户端</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cs = socket()               # 创建客户端套接字</span><br><span class="line">cs.connect()                # 尝试连接服务器</span><br><span class="line">comm_loop:                  # 通信循环</span><br><span class="line">    cs.send()/cs.recv()     # 对话</span><br><span class="line">cs.close()                  # 关闭客户端套接字</span><br></pre></td></tr></table></figure>
+<h4 id="3-5、运行客户端与服务器"><a href="#3-5、运行客户端与服务器" class="headerlink" title="3.5、运行客户端与服务器"></a>3.5、运行客户端与服务器</h4><p>先运行服务器端。</p>
+<h4 id="3-6、创建一个UDP服务器"><a href="#3-6、创建一个UDP服务器" class="headerlink" title="3.6、创建一个UDP服务器"></a>3.6、创建一个UDP服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ss = socket</span><br><span class="line">ss.bind()</span><br><span class="line">inf_loop:</span><br><span class="line">    cs = ss.recvfrom()/ss.sendto()</span><br><span class="line">ss.close()</span><br></pre></td></tr></table></figure>
+<h4 id="3-7、创建一个UDP客户端"><a href="#3-7、创建一个UDP客户端" class="headerlink" title="3.7、创建一个UDP客户端"></a>3.7、创建一个UDP客户端</h4><h4 id="3-8、执行客户端和服务器"><a href="#3-8、执行客户端和服务器" class="headerlink" title="3.8、执行客户端和服务器"></a>3.8、执行客户端和服务器</h4><h4 id="3-9、Socket模块属性"><a href="#3-9、Socket模块属性" class="headerlink" title="3.9、Socket模块属性"></a>3.9、Socket模块属性</h4><h3 id="4、SocketServer属性"><a href="#4、SocketServer属性" class="headerlink" title="4、SocketServer属性"></a>4、SocketServer属性</h3><h3 id="5、Twisted框架"><a href="#5、Twisted框架" class="headerlink" title="5、Twisted框架"></a>5、Twisted框架</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/09/Python总结/" data-id="cjekf80680000f8usfd5xgopk" class="article-share-link">Teilen</a>
+      <a data-url="http://www.meczhang.com/2018/03/09/Python总结/" data-id="cjeldovfq0000ucuscc84jw8b" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -338,7 +651,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/09/hello-world/" data-id="cjekf806c0001f8us4l83cwn1" class="article-share-link">Teilen</a>
+      <a data-url="http://www.meczhang.com/2018/03/09/hello-world/" data-id="cjeldovfu0001ucusvvbj2j7h" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -364,7 +677,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
     </div>
@@ -374,12 +687,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2018/03/09/Python总结/">Python总结</a>
+            <a href="/2018/03/09/Python总结/">《Python核心编程》读书笔记</a>
           </li>
         
           <li>
@@ -399,7 +712,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 张云涛<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé par <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
