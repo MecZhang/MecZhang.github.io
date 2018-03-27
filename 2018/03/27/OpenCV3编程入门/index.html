@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>OpenCV3编程入门 | 张云涛的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第一部分 快速上手OpenCV第一章 邂逅OpenCVOpenCV应用领域 人机交互 物体识别 图像分区 人脸识别 动作识别 运动跟踪 机器人  关于opencv_modules.hpp文件其内容使模块构造的说明    calib3d   相机校准和三维重建相关的内容 contrib   不太稳定的可选功能，如人脸识别，立体匹配，人工视网膜模型等技术 core      核心功能模块 基本数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV3编程入门">
+<meta property="og:url" content="http://www.meczhang.com/2018/03/27/OpenCV3编程入门/index.html">
+<meta property="og:site_name" content="张云涛的博客">
+<meta property="og:description" content="第一部分 快速上手OpenCV第一章 邂逅OpenCVOpenCV应用领域 人机交互 物体识别 图像分区 人脸识别 动作识别 运动跟踪 机器人  关于opencv_modules.hpp文件其内容使模块构造的说明    calib3d   相机校准和三维重建相关的内容 contrib   不太稳定的可选功能，如人脸识别，立体匹配，人工视网膜模型等技术 core      核心功能模块 基本数据结构">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-27T08:36:08.794Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenCV3编程入门">
+<meta name="twitter:description" content="第一部分 快速上手OpenCV第一章 邂逅OpenCVOpenCV应用领域 人机交互 物体识别 图像分区 人脸识别 动作识别 运动跟踪 机器人  关于opencv_modules.hpp文件其内容使模块构造的说明    calib3d   相机校准和三维重建相关的内容 contrib   不太稳定的可选功能，如人脸识别，立体匹配，人工视网膜模型等技术 core      核心功能模块 基本数据结构">
+  
+    <link rel="alternate" href="/atom.xml" title="张云涛的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">张云涛的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">分享促进步</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-OpenCV3编程入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/27/OpenCV3编程入门/" class="article-date">
+  <time datetime="2018-03-27T06:05:06.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      OpenCV3编程入门
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第一部分-快速上手OpenCV"><a href="#第一部分-快速上手OpenCV" class="headerlink" title="第一部分 快速上手OpenCV"></a>第一部分 快速上手OpenCV</h2><h2 id="第一章-邂逅OpenCV"><a href="#第一章-邂逅OpenCV" class="headerlink" title="第一章 邂逅OpenCV"></a>第一章 邂逅OpenCV</h2><h3 id="OpenCV应用领域"><a href="#OpenCV应用领域" class="headerlink" title="OpenCV应用领域"></a>OpenCV应用领域</h3><ul>
+<li>人机交互</li>
+<li>物体识别</li>
+<li>图像分区</li>
+<li>人脸识别</li>
+<li>动作识别</li>
+<li>运动跟踪</li>
+<li>机器人</li>
+</ul>
+<p>关于opencv_modules.hpp文件<br>其内容使模块构造的说明  </p>
+<ul>
+<li>calib3d   相机校准和三维重建相关的内容</li>
+<li>contrib   不太稳定的可选功能，如人脸识别，立体匹配，人工视网膜模型等技术</li>
+<li>core      核心功能模块<ul>
+<li>基本数据结构</li>
+<li>动态数据结构</li>
+<li>绘图函数</li>
+<li>数组操作相关函数</li>
+<li>辅助功能与系统函数和宏</li>
+<li>与OpenGL的互操作</li>
+</ul>
+</li>
+<li>imgproc   图像处理模块<ul>
+<li>线性和非线性的图像滤波</li>
+<li>图像的几何变换</li>
+<li>其他图像转换</li>
+<li>直方图相关</li>
+<li>结构分析和形象描述</li>
+<li>运动分析和对象跟踪</li>
+<li>特征检测</li>
+<li>目标检测等</li>
+</ul>
+</li>
+<li>features2d    2D功能框架<ul>
+<li>特征检测和描述</li>
+<li>特征检测器通用接口</li>
+<li>描述符提取器通用接口</li>
+<li>描述符匹配器通用接口</li>
+<li>通用描述符匹配器通用接口</li>
+<li>关键点绘制函数和匹配功能绘制函数</li>
+</ul>
+</li>
+<li>flann 高维的近似邻快速搜索算法库<ul>
+<li>快速近似最近邻搜素</li>
+<li>聚类</li>
+</ul>
+</li>
+<li>gpu   </li>
+<li>highgui   高层GUI图形用户界面</li>
+<li>legacy    已经废弃的代码块</li>
+<li>ml    机器学习模块，主要是统计模型和分类算法<ul>
+<li>统计模型</li>
+<li>一般贝叶斯分类器</li>
+<li>K-近邻</li>
+<li>支持向量机</li>
+<li>决策树</li>
+<li>提升</li>
+<li>梯度提高树</li>
+<li>随机树</li>
+<li>超随机树</li>
+<li>期望最大化</li>
+<li>神经网络</li>
+<li>MLData</li>
+</ul>
+</li>
+<li>nonfree   一些具有专利的算法模块，包含特征检测和GPU相关的内容</li>
+<li>objdetect 目标检测模块<ul>
+<li>级联分类 cascade classification</li>
+<li>latent svm</li>
+</ul>
+</li>
+<li>ocl   运用OpenCL加速的计算机视觉模块</li>
+<li>photo 图像修复和图像去噪两部分</li>
+<li>stitching 图像拼接模块<ul>
+<li>拼接流水线</li>
+<li>特点寻找和匹配图像</li>
+<li>图像旋转</li>
+<li>自动校准</li>
+<li>图片歪斜</li>
+<li>接缝估测</li>
+<li>曝光补偿</li>
+<li>图片混合</li>
+</ul>
+</li>
+<li>superres    超分辨率技术的相关功能模块</li>
+<li>ts  测试相关代码</li>
+<li>video 视频分析组件，包括运动估计、背景分离、对象跟踪等视频处理相关内容</li>
+<li>videostab 视频稳定相关的组件</li>
+</ul>
+<h3 id="程序上手"><a href="#程序上手" class="headerlink" title="程序上手"></a>程序上手</h3><p>例程</p>
+<ol>
+<li><p>图像显示</p>
+</li>
+<li><p>图像腐蚀<br>腐蚀：用图像中的暗色部分腐蚀掉高亮部分<br>使用erode函数</p>
+</li>
+<li><p>图像模糊<br>使用blur函数</p>
+</li>
+<li><p>边缘检测<br>使用canny函数</p>
+</li>
+</ol>
+<h3 id="视频操作基础"><a href="#视频操作基础" class="headerlink" title="视频操作基础"></a>视频操作基础</h3><p>读取并播放视频<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VideoCapture capture(&quot;1.avi&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>调用摄像头采集图像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VideoCapture capture(0);</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="第二章-认知准备"><a href="#第二章-认知准备" class="headerlink" title="第二章 认知准备"></a>第二章 认知准备</h2><h3 id="2-1-官方例程"><a href="#2-1-官方例程" class="headerlink" title="2.1 官方例程"></a>2.1 官方例程</h3><ol>
+<li>彩色目标跟踪 Camshift</li>
+<li>光流 optical flow<br>光流法是目前运动图像分析的重要方法。<br>光流用来指定时变图像中模式的运动速度</li>
+<li>点追踪 lkdemo</li>
+<li>人脸识别 objectDetection</li>
+<li>支持向量机引导</li>
+</ol>
+<h3 id="2-3-opencv-hpp头文件"><a href="#2-3-opencv-hpp头文件" class="headerlink" title="2.3 opencv.hpp头文件"></a>2.3 opencv.hpp头文件</h3><p>其中已经包括了各个模块的引用</p>
+<hr>
+<h2 id="第三章-HighGUI图形用户界面"><a href="#第三章-HighGUI图形用户界面" class="headerlink" title="第三章 HighGUI图形用户界面"></a>第三章 HighGUI图形用户界面</h2><h3 id="3-1-图像的载入、显示和输出到文件"><a href="#3-1-图像的载入、显示和输出到文件" class="headerlink" title="3.1 图像的载入、显示和输出到文件"></a>3.1 图像的载入、显示和输出到文件</h3><ol>
+<li>命名空间<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;opencv2/core/core.hpp&gt;</span><br><span class="line">#include &lt;opencv2/highgui/highgui.hpp&gt;</span><br><span class="line">using namespace cv;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>此三句可以作为以后编写opencv程序时的标配。</p>
+<ol>
+<li><p>Mat类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mat srcImage = imread(&quot;data.jpg&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>InputArray类型</p>
+</li>
+<li>创建窗口 namedWindow()函数</li>
+<li>输出图像到文件 imwrite()函数<br>bool类型</li>
+</ol>
+<h3 id="3-2-滑动条"><a href="#3-2-滑动条" class="headerlink" title="3.2 滑动条"></a>3.2 滑动条</h3><ol>
+<li>创建之 createTrackbar()</li>
+<li>获取位置 getTrackbarPos()</li>
+</ol>
+<h3 id="3-3-鼠标操作"><a href="#3-3-鼠标操作" class="headerlink" title="3.3 鼠标操作"></a>3.3 鼠标操作</h3><p>SetMouseCallback()函数</p>
+<hr>
+<h2 id="第二部分-core组件"><a href="#第二部分-core组件" class="headerlink" title="第二部分 core组件"></a>第二部分 core组件</h2><h2 id="第四章-OpenCV数据结构和基本绘图"><a href="#第四章-OpenCV数据结构和基本绘图" class="headerlink" title="第四章 OpenCV数据结构和基本绘图"></a>第四章 OpenCV数据结构和基本绘图</h2><h3 id="4-1-基础图像容器-Mat"><a href="#4-1-基础图像容器-Mat" class="headerlink" title="4.1 基础图像容器 Mat"></a>4.1 基础图像容器 Mat</h3><p>Mat是一个类，由两个数据部分组成：矩阵头和一个指向储存所有像素值的矩阵的指针。</p>
+<h3 id="4-2-常用数据结构和函数"><a href="#4-2-常用数据结构和函数" class="headerlink" title="4.2 常用数据结构和函数"></a>4.2 常用数据结构和函数</h3><ol>
+<li><p>点 Point类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Point point;</span><br><span class="line">point.x = 1;</span><br><span class="line">point.y = 2;</span><br><span class="line"></span><br><span class="line">Point point2 = Point(1,2);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>颜色表示 Scalar类<br>Scalar()表示有4个元素的数组，在opencv中被大量用于传递像素值，如RGB颜色值。<br>如果用不到第四个参数，则不需要写出来。 </p>
+</li>
+<li><p>尺寸的表示 Size类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Size(5,5);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>矩形的表示 Rect类<br>其有x,y,width,height四个成员变量。  </p>
+</li>
+</ol>
+<ul>
+<li>area()返回其面积，</li>
+<li>contains(Point)判断点是否在矩形内，</li>
+<li>br()返回右下角点坐标</li>
+</ul>
+<ol>
+<li>颜色空间转换 cvtColor()函数</li>
+</ol>
+<h3 id="4-3-基本图形的绘制"><a href="#4-3-基本图形的绘制" class="headerlink" title="4.3 基本图形的绘制"></a>4.3 基本图形的绘制</h3><hr>
+<h2 id="第五章-core组件进阶"><a href="#第五章-core组件进阶" class="headerlink" title="第五章 core组件进阶"></a>第五章 core组件进阶</h2><h3 id="5-1-访问图像中的像素"><a href="#5-1-访问图像中的像素" class="headerlink" title="5.1 访问图像中的像素"></a>5.1 访问图像中的像素</h3><h3 id="5-2-ROI区域图像叠加-amp-图像混合"><a href="#5-2-ROI区域图像叠加-amp-图像混合" class="headerlink" title="5.2 ROI区域图像叠加&amp;图像混合"></a>5.2 ROI区域图像叠加&amp;图像混合</h3><ol>
+<li>感兴趣区域 ROI</li>
+<li>线性混合操作<h3 id="5-3-分离颜色通道、多通道图像混合"><a href="#5-3-分离颜色通道、多通道图像混合" class="headerlink" title="5.3 分离颜色通道、多通道图像混合"></a>5.3 分离颜色通道、多通道图像混合</h3></li>
+<li>通道分离 split()函数</li>
+<li>通道合并 merge()函数<h3 id="5-4-图像对比度、亮度调整"><a href="#5-4-图像对比度、亮度调整" class="headerlink" title="5.4 图像对比度、亮度调整"></a>5.4 图像对比度、亮度调整</h3><h3 id="5-5-离散傅里叶变换"><a href="#5-5-离散傅里叶变换" class="headerlink" title="5.5 离散傅里叶变换"></a>5.5 离散傅里叶变换</h3><h3 id="5-6-输入输出XML和YAML文件"><a href="#5-6-输入输出XML和YAML文件" class="headerlink" title="5.6 输入输出XML和YAML文件"></a>5.6 输入输出XML和YAML文件</h3></li>
+</ol>
+<hr>
+<h2 id="第三部分-掌握imgproc组件"><a href="#第三部分-掌握imgproc组件" class="headerlink" title="第三部分 掌握imgproc组件"></a>第三部分 掌握imgproc组件</h2><h2 id="第六章-图像处理"><a href="#第六章-图像处理" class="headerlink" title="第六章 图像处理"></a>第六章 图像处理</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.meczhang.com/2018/03/27/OpenCV3编程入门/" data-id="cjf9eq1ug0000wgusn4y7nlgp" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/27/学习资源整理/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">学习资源整理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/27/OpenCV3编程入门/">OpenCV3编程入门</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/27/学习资源整理/">学习资源整理</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/26/Ubuntu系统配置/">Ubuntu系统配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/20/人工智能入门01/">人工智能入门01</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/17/FreeRTOS笔记/">FreeRTOS笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 张云涛<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
