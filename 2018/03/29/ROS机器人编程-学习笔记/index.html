@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>ROS机器人编程_学习笔记 | 张云涛的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第一章 机器人软件平台 第二章 机器人操作系统ROS 第三章 搭建ROS开发环境 第四章 ROS的重要概念 第五章 ROS命令 第六章 ROS工具 第七章 ROS编程基础7.1 须知1、 标准单位2、坐标表现方式x: forwardy: leftz: up 3、编程规则 7.2 发布者节点和订阅者节点的创建和运行1、创建功能包  第八章 机器人、传感器和电机 第九章 嵌入式系统 第十章 移动机器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROS机器人编程_学习笔记">
+<meta property="og:url" content="http://www.meczhang.com/2018/03/29/ROS机器人编程-学习笔记/index.html">
+<meta property="og:site_name" content="张云涛的博客">
+<meta property="og:description" content="第一章 机器人软件平台 第二章 机器人操作系统ROS 第三章 搭建ROS开发环境 第四章 ROS的重要概念 第五章 ROS命令 第六章 ROS工具 第七章 ROS编程基础7.1 须知1、 标准单位2、坐标表现方式x: forwardy: leftz: up 3、编程规则 7.2 发布者节点和订阅者节点的创建和运行1、创建功能包  第八章 机器人、传感器和电机 第九章 嵌入式系统 第十章 移动机器">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-29T02:17:00.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ROS机器人编程_学习笔记">
+<meta name="twitter:description" content="第一章 机器人软件平台 第二章 机器人操作系统ROS 第三章 搭建ROS开发环境 第四章 ROS的重要概念 第五章 ROS命令 第六章 ROS工具 第七章 ROS编程基础7.1 须知1、 标准单位2、坐标表现方式x: forwardy: leftz: up 3、编程规则 7.2 发布者节点和订阅者节点的创建和运行1、创建功能包  第八章 机器人、传感器和电机 第九章 嵌入式系统 第十章 移动机器">
+  
+    <link rel="alternate" href="/atom.xml" title="张云涛的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">张云涛的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">分享促进步</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ROS机器人编程-学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/ROS机器人编程-学习笔记/" class="article-date">
+  <time datetime="2018-03-29T02:00:54.000Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ROS机器人编程_学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="第一章-机器人软件平台"><a href="#第一章-机器人软件平台" class="headerlink" title="第一章 机器人软件平台"></a>第一章 机器人软件平台</h2><hr>
+<h2 id="第二章-机器人操作系统ROS"><a href="#第二章-机器人操作系统ROS" class="headerlink" title="第二章 机器人操作系统ROS"></a>第二章 机器人操作系统ROS</h2><hr>
+<h2 id="第三章-搭建ROS开发环境"><a href="#第三章-搭建ROS开发环境" class="headerlink" title="第三章 搭建ROS开发环境"></a>第三章 搭建ROS开发环境</h2><hr>
+<h2 id="第四章-ROS的重要概念"><a href="#第四章-ROS的重要概念" class="headerlink" title="第四章 ROS的重要概念"></a>第四章 ROS的重要概念</h2><hr>
+<h2 id="第五章-ROS命令"><a href="#第五章-ROS命令" class="headerlink" title="第五章 ROS命令"></a>第五章 ROS命令</h2><hr>
+<h2 id="第六章-ROS工具"><a href="#第六章-ROS工具" class="headerlink" title="第六章 ROS工具"></a>第六章 ROS工具</h2><hr>
+<h2 id="第七章-ROS编程基础"><a href="#第七章-ROS编程基础" class="headerlink" title="第七章 ROS编程基础"></a>第七章 ROS编程基础</h2><h3 id="7-1-须知"><a href="#7-1-须知" class="headerlink" title="7.1 须知"></a>7.1 须知</h3><p>1、 标准单位<br>2、坐标表现方式<br>x: forward<br>y: left<br>z: up</p>
+<p>3、编程规则</p>
+<h3 id="7-2-发布者节点和订阅者节点的创建和运行"><a href="#7-2-发布者节点和订阅者节点的创建和运行" class="headerlink" title="7.2 发布者节点和订阅者节点的创建和运行"></a>7.2 发布者节点和订阅者节点的创建和运行</h3><p>1、创建功能包</p>
+<hr>
+<h2 id="第八章-机器人、传感器和电机"><a href="#第八章-机器人、传感器和电机" class="headerlink" title="第八章 机器人、传感器和电机"></a>第八章 机器人、传感器和电机</h2><hr>
+<h2 id="第九章-嵌入式系统"><a href="#第九章-嵌入式系统" class="headerlink" title="第九章 嵌入式系统"></a>第九章 嵌入式系统</h2><hr>
+<h2 id="第十章-移动机器人"><a href="#第十章-移动机器人" class="headerlink" title="第十章 移动机器人"></a>第十章 移动机器人</h2><hr>
+<h2 id="第十一章-SLAM和导航"><a href="#第十一章-SLAM和导航" class="headerlink" title="第十一章 SLAM和导航"></a>第十一章 SLAM和导航</h2><hr>
+<h2 id="第十二章-服务机器"><a href="#第十二章-服务机器" class="headerlink" title="第十二章 服务机器"></a>第十二章 服务机器</h2><hr>
+<h2 id="第十三章-机械手臂"><a href="#第十三章-机械手臂" class="headerlink" title="第十三章 机械手臂"></a>第十三章 机械手臂</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.meczhang.com/2018/03/29/ROS机器人编程-学习笔记/" data-id="cjfcekhln000318usbewd9b71" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/29/STM32工程模板-基于HAL库/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          STM32工程模板_基于HAL库
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/28/路径规划笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">路径规划笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/29/STM32工程模板-基于HAL库/">STM32工程模板_基于HAL库</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/29/ROS机器人编程-学习笔记/">ROS机器人编程_学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/28/路径规划笔记/">路径规划笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/28/进度报告0328/">进度报告0328</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/27/OpenCV3编程入门/">OpenCV3编程入门</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 张云涛<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

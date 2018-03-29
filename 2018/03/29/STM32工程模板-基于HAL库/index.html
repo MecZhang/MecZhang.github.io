@@ -5,15 +5,19 @@
   
 
   
-  <title>Archiv: 2018 | 张云涛的博客</title>
+  <title>STM32工程模板_基于HAL库 | 张云涛的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="张云涛的博客">
-<meta property="og:url" content="http://www.meczhang.com/archives/2018/page/2/index.html">
+  <meta name="description" content="毕业设计即将结束，总结嵌入式开发知识之STM32工程模板知识于此。主要参考正点原子以及DJI开源的步兵车工程文件以及其他资源。    具有HAL库，本人安装有STM32 Cube MX软件，之前用其下载有HAL库，存储位置默认为C:\Users\${USERNAME}\STM32Cube\Repository\STM32Cube_FW_F4_V1.16.0    新建工程模板，使用Keil软件。新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STM32工程模板_基于HAL库">
+<meta property="og:url" content="http://www.meczhang.com/2018/03/29/STM32工程模板-基于HAL库/index.html">
 <meta property="og:site_name" content="张云涛的博客">
+<meta property="og:description" content="毕业设计即将结束，总结嵌入式开发知识之STM32工程模板知识于此。主要参考正点原子以及DJI开源的步兵车工程文件以及其他资源。    具有HAL库，本人安装有STM32 Cube MX软件，之前用其下载有HAL库，存储位置默认为C:\Users\${USERNAME}\STM32Cube\Repository\STM32Cube_FW_F4_V1.16.0    新建工程模板，使用Keil软件。新">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-29T10:52:37.135Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张云涛的博客">
+<meta name="twitter:title" content="STM32工程模板_基于HAL库">
+<meta name="twitter:description" content="毕业设计即将结束，总结嵌入式开发知识之STM32工程模板知识于此。主要参考正点原子以及DJI开源的步兵车工程文件以及其他资源。    具有HAL库，本人安装有STM32 Cube MX软件，之前用其下载有HAL库，存储位置默认为C:\Users\${USERNAME}\STM32Cube\Repository\STM32Cube_FW_F4_V1.16.0    新建工程模板，使用Keil软件。新">
   
     <link rel="alternate" href="/atom.xml" title="张云涛的博客" type="application/atom+xml">
   
@@ -64,121 +68,89 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/13/Latex笔记/" class="archive-article-date">
-  <time datetime="2018-03-12T19:30:31.000Z" itemprop="datePublished">Mar 13</time>
+        <section id="main"><article id="post-STM32工程模板-基于HAL库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/29/STM32工程模板-基于HAL库/" class="article-date">
+  <time datetime="2018-03-29T10:40:48.000Z" itemprop="datePublished">2018-03-29</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/13/Latex笔记/">Latex笔记</a>
+    <h1 class="article-title" itemprop="name">
+      STM32工程模板_基于HAL库
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/11/关于毕业设计/" class="archive-article-date">
-  <time datetime="2018-03-10T18:58:28.000Z" itemprop="datePublished">Mar 11</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/11/关于毕业设计/">关于毕业设计</a>
-    </h1>
-  
+        <p>毕业设计即将结束，总结嵌入式开发知识之STM32工程模板知识于此。<br>主要参考正点原子以及DJI开源的步兵车工程文件以及其他资源。  </p>
+<ol>
+<li><p>具有HAL库，本人安装有STM32 Cube MX软件，之前用其下载有HAL库，<br>存储位置默认为<code>C:\Users\${USERNAME}\STM32Cube\Repository\STM32Cube_FW_F4_V1.16.0</code>  </p>
+</li>
+<li><p>新建工程模板，使用Keil软件。<br>新建文件夹 USER、DRIVER/CMSIS， DRIVER/HAL_LIB、 HARDWARE、 OTHER_LIB、 OBJ</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>文件夹</th>
+<th>存储内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>main.c以及工程文件等</td>
+</tr>
+<tr>
+<td>DRIVER</td>
+<td>CMSIS以及HAL库文件</td>
+</tr>
+<tr>
+<td>HARDWARE</td>
+<td>串口、CAN等接口以及外设等硬件相关文件</td>
+</tr>
+<tr>
+<td>OTHER_LIB</td>
+<td>其他库文件</td>
+</tr>
+<tr>
+<td>OBJ</td>
+<td>生成文件</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/10/A-Byte-of-Python读书笔记/" class="archive-article-date">
-  <time datetime="2018-03-10T14:13:38.000Z" itemprop="datePublished">Mar 10</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/10/A-Byte-of-Python读书笔记/">《A Byte of Python》读书笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/09/Python总结/" class="archive-article-date">
-  <time datetime="2018-03-09T13:29:59.000Z" itemprop="datePublished">Mar 9</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.meczhang.com/2018/03/29/STM32工程模板-基于HAL库/" data-id="cjfcekhln000418us99jrm9qs" class="article-share-link">Teilen</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/Python总结/">《Python核心编程》读书笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/09/hello-world/" class="archive-article-date">
-  <time datetime="2018-03-09T12:31:09.743Z" itemprop="datePublished">Mar 9</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; zurück</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-  </nav>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/29/ROS机器人编程-学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">ROS机器人编程_学习笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 </section>
         
