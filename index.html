@@ -55,7 +55,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
@@ -128,7 +128,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/04/13/Ubuntu初始配置/" data-id="cjfwuwgh3000clgusvow94nj6" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/04/13/Ubuntu初始配置/" data-id="cjfww0dpq000cdguspsihsz4j" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -179,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/04/12/Django搭建博客/" data-id="cjfwuwgh00005lgusssr0mrv1" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/04/12/Django搭建博客/" data-id="cjfww0dp30000dgus0ce8d0np" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -226,7 +226,32 @@
 <li><p>下载tensorflow/models源文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/tensorflow/models.git</span><br></pre></td></tr></table></figure>
 </li>
-<li></li>
+<li><p>安装API<br>以下内容参考自<a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md" target="_blank" rel="noopener">GitHub</a>。</p>
+<ol>
+<li><p>安装依赖(鉴于本人使用python虚拟环境)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip isntall tensorflow</span><br><span class="line">pip install Cython</span><br><span class="line">pip install pillow</span><br><span class="line">pip install lxml</span><br><span class="line">pip install jupyter</span><br><span class="line">pip install matplotlib</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装COCO API</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/cocodataset/cocoapi.git</span><br><span class="line">cd cocoapi/PythonAPI</span><br><span class="line">make</span><br><span class="line">cp -r pycocotools &lt;path_to_tensorflow&gt;/models/research/</span><br></pre></td></tr></table></figure>
+<p>此步失败，问题尚未解决</p>
+</li>
+<li><p>编译protobuf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install protobuf-compiler</span><br><span class="line">protoc object_detection/protos/*.proto --python_out=. #切换到models/research目录下</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 当前目录位于models/research</span><br><span class="line">export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim #建议将其导入~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>提示OK，表明成功。<br>如果失败，可以考虑新建.pth文件于site-packages目录下，其内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xxx/models/research/object_detection/</span><br><span class="line">XXX/models/research/object_detection/slim</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>参考自window系统下出现问题时的解决方案。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>测试object detection API<br>在models目录下，输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">juptyer-notebook</span><br></pre></td></tr></table></figure>
+<p>在浏览器中依次打开<code>research/object_detection/object_detection_tutorials.ipynb</code><br>连按<code>shift+Enter</code>，直至最后一行，等待数秒，会显示出测试图片的检测结果。</p>
+</li>
 </ol>
 </li>
 </ol>
@@ -234,7 +259,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/04/11/Tensorflow实现物体识别/" data-id="cjfwuwgh3000algusf5fi5a3y" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/04/11/Tensorflow实现物体识别/" data-id="cjfww0dpq000adguseddwzrrb" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -270,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/04/06/Python爬虫实践/" data-id="cjfwuwgh30007lgus8aswh0j2" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/04/06/Python爬虫实践/" data-id="cjfww0dpo0007dgus05me4vss" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -308,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/04/01/4月开始/" data-id="cjfwuwggk0003lgusmyhk7st5" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/04/01/4月开始/" data-id="cjfww0dp30002dgusvfz5uq7t" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -385,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/29/STM32工程模板-基于HAL库/" data-id="cjfwuwgh30009lgus9bob764h" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/03/29/STM32工程模板-基于HAL库/" data-id="cjfww0dpq0009dgus516de4lf" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -437,7 +462,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/29/ROS机器人编程-学习笔记/" data-id="cjfwuwgh30008lguswdwynvr9" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/03/29/ROS机器人编程-学习笔记/" data-id="cjfww0dpo0008dgus7sqia8ix" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -524,7 +549,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/28/路径规划笔记/" data-id="cjfwuwgh3000jlgusv0rmdlb8" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/03/28/路径规划笔记/" data-id="cjfww0dpq000hdguslrw5ohkk" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -563,7 +588,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/28/进度报告0328/" data-id="cjfwuwgh3000hlgus17zh32m3" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/03/28/进度报告0328/" data-id="cjfww0dpq000idguseldb32zu" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -760,7 +785,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.meczhang.com/2018/03/27/OpenCV3编程入门/" data-id="cjfwuwggk0004lgusoltmjtzs" class="article-share-link">Share</a>
+      <a data-url="http://www.meczhang.com/2018/03/27/OpenCV3编程入门/" data-id="cjfww0dpj0004dgusviozk41p" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -774,7 +799,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -791,7 +816,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
     </div>
@@ -801,7 +826,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
