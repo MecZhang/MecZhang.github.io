@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Ubuntu初始配置 | 张云涛的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="设置中英文目录 1234export LANG=en_USxdg-user-dirs-gtk-update#更新目录export LANG=zh_CN.UTF-8  软件设置软件与更新勾选源代码，Canonical等选项，选择服务器  更新系统 12sudo apt updatesudo apt upgrade  卸载不必要软件 12sudo apt remove unity-webapps-c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu初始配置">
+<meta property="og:url" content="http://www.meczhang.com/2018/04/13/Ubuntu初始配置/index.html">
+<meta property="og:site_name" content="张云涛的博客">
+<meta property="og:description" content="设置中英文目录 1234export LANG=en_USxdg-user-dirs-gtk-update#更新目录export LANG=zh_CN.UTF-8  软件设置软件与更新勾选源代码，Canonical等选项，选择服务器  更新系统 12sudo apt updatesudo apt upgrade  卸载不必要软件 12sudo apt remove unity-webapps-c">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-04-12T18:02:54.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu初始配置">
+<meta name="twitter:description" content="设置中英文目录 1234export LANG=en_USxdg-user-dirs-gtk-update#更新目录export LANG=zh_CN.UTF-8  软件设置软件与更新勾选源代码，Canonical等选项，选择服务器  更新系统 12sudo apt updatesudo apt upgrade  卸载不必要软件 12sudo apt remove unity-webapps-c">
+  
+    <link rel="alternate" href="/atom.xml" title="张云涛的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">张云涛的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">分享促进步</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.meczhang.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Ubuntu初始配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/13/Ubuntu初始配置/" class="article-date">
+  <time datetime="2018-04-12T17:42:22.000Z" itemprop="datePublished">2018-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ubuntu初始配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>设置中英文目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export LANG=en_US</span><br><span class="line">xdg-user-dirs-gtk-update</span><br><span class="line">#更新目录</span><br><span class="line">export LANG=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>软件设置软件与更新<br>勾选源代码，Canonical等选项，选择服务器</p>
+</li>
+<li><p>更新系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>卸载不必要软件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt remove unity-webapps-common</span><br><span class="line"># 以及其他游戏等无用的软件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装重要软件</p>
+</li>
+</ol>
+<ul>
+<li><p>安装ssh</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br><span class="line">sudo ps -e | grep ssh 查看是否启动</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装搜狗输入法<br>下载搜狗输入法Linux版，更改属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i sogoupinyinxxx.deb</span><br><span class="line">sudo apt -f install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装chrome</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/ #添加软件源</span><br><span class="line">wget -q -O - https://dl.google.com/linux/linux_signing_key.pub  | sudo apt-key add - #导入公钥</span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install google-chrome-stable</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>安装便捷软件</li>
+</ol>
+<ul>
+<li><p>fish</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fish</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.meczhang.com/2018/04/13/Ubuntu初始配置/" data-id="cjfwu0hsb00072wus719tt2ke" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/12/Django搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Django搭建博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/13/Ubuntu初始配置/">Ubuntu初始配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/Django搭建博客/">Django搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/11/Tensorflow实现物体识别/">Tensorflow实现物体识别</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/06/Python爬虫实践/">Python爬虫实践</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/01/4月开始/">4月开始</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 张云涛<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
